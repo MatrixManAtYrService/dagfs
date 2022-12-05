@@ -1,6 +1,7 @@
+from datetime import datetime, timedelta
+
 from airflow import DAG
 from airflow.operators.bash import BashOperator
-from datetime import datetime, timedelta
 
 with DAG(dag_id="hello_world", schedule=timedelta(days=30 * 365), start_date=datetime(1970, 1, 1)) as dag:
     (
