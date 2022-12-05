@@ -140,3 +140,5 @@ cython_debug/
 .vscode
 get-pip.py
 .direnv/
+
+airflow_logs/

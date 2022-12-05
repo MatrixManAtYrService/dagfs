@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+echo "airflow ${@}" | docker exec -i dagfs-airflow-scheduler-1 bash

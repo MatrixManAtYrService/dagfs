@@ -4,9 +4,10 @@ description = "A dependency-aware 'filesystem' for use with Apache Airflow"
 authors = ["Matt Rixman <matt@astronomer.io>"]
 license = "License :: OSI Approved :: Apache Software License"
 version = "0.1.0"
-packages = [{include = "dagfs", from = "."}]
+packages = [{include = "dagfs", from = "src"}]
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.2.0"
+psycopg2 = "^2.9.5"
 
 
 [build-system]
