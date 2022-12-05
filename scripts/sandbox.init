@@ -1,9 +1,16 @@
 #! /usr/bin/env bash
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 set -euox pipefail
+
+
 if [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     cd $SCRIPT_DIR
     echo -e "AIRFLOW_UID=$(id -u)" > .env
     cd -
 fi
+
+# build wheel
+poetry build
+
+# setup sandbox db
 docker-compose run airflow-init

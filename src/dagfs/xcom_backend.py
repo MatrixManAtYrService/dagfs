@@ -1,2 +1,2 @@
 def stuff() -> None:
-    print("will go here")
+    print("will go here!")

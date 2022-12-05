@@ -141,4 +141,4 @@ cython_debug/
 get-pip.py
 .direnv/
 
-airflow_logs/
+result
